@@ -1,14 +1,19 @@
 package fizzbuzz;
 import java.util.*;
-import java.io.*;
 public class FizzBuzz {
-	public static void main(String[] args) throws IOException{
-		int num;
+	public static void main(String[] args) {
+		int num=0;
 		System.out.println("Enter number to be checked : ");
-
 		Scanner inputScan = new Scanner(System.in);
-		num = inputScan.nextInt();
+
+		try {
+			num = inputScan.nextInt();
+		}
+		catch (InputMismatchException e){
+			System.out.print("Input need to be an integer");
+		}
 		
+		inputScan.close();
 		int temp = num;
 		/* iteration */
 		for(num = 1; num<=temp; num++){
