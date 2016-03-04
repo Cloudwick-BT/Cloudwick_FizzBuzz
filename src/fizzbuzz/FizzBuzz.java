@@ -4,24 +4,27 @@ import java.io.*;
 public class FizzBuzz {
 	public static void main(String[] args) throws IOException{
 		int num;
-		//Scanner inputScan = new Scanner(System.in);
 		System.out.println("Enter number to be checked : ");
-		//num = inputScan.nextInt();
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		num = Integer.parseInt(br.readLine());
-		if(num%3 != 0 && num%5 != 0){
-			System.out.println(num);				
-		}
-		else if(num%3 == 0 && num%5 ==0){
-			System.out.println("Fizz Buzz");
-		}
-		else if(num%3 == 0){
-			System.out.println("Fizz");
-		}
-		else {
-			System.out.println("Buzz");
-		}
+
+		Scanner inputScan = new Scanner(System.in);
+		num = inputScan.nextInt();
 		
+		int temp = num;
+		/* iteration */
+		for(num = 1; num<=temp; num++){
+			if(num%3 == 0 && num%5 ==0){
+				System.out.print("Fizz Buzz, ");
+			}
+			else if(num%3 == 0){
+				System.out.print("Fizz, ");
+			}
+			else if(num%5 == 0){
+				System.out.print("Buzz, ");
+			}
+			else{
+				System.out.print(num + ", ");
+			}
+		}
 			
 	}
 }
